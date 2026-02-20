@@ -1,0 +1,7 @@
+{
+  "publishKey": "Your Publish Key",
+  "subscribeKey": "Your Subscribe Key",
+  "secretKey": "Your Secret Key",
+  "uuid": "user1"
+  // Remove the .txt from the file name
+}
