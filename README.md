@@ -19,3 +19,4 @@
 * Created the News app project
 * Rebuilt Repo to include the news app project
 * Added the express server for the news app project
+* Created the front end for the news app project

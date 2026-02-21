@@ -1,5 +1,6 @@
 const express = require('express');
 const request = require('request');
+const path = require('path');
 const stories = require('./stories.json');
 
 const app = express();
@@ -12,8 +13,11 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     next();
 });
+
+app.use(express.static(path.join(__dirname, 'client/dist')));
+
 app.get('/ping', (req, res) => {
-    res.status(200).send('pong!');
+    res.status(200).send('pong!!');
 });
 
 app.get('/stories', (req, res) => {
@@ -25,7 +29,7 @@ app.get('/stories/:title', (req, res) => {
 
     res.json(stories.filter(story => story.title.includes(title))); //
 });
-// 'https://hacker-news.firebaseio.com/v0/topstories.json'
+
 app.get('/topstories', (req, res, next) => {
     request(
         {url: 'https://hacker-news.firebaseio.com/v0/topstories.json'},
