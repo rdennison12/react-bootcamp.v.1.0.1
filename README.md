@@ -18,3 +18,4 @@
 * Completed the Reaction app project and added it to the portfolio project
 * Created the News app project
 * Rebuilt Repo to include the news app project
+* Added the express server for the news app project
